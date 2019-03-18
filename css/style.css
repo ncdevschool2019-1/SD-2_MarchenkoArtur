@@ -1,0 +1,85 @@
+body{
+	background-color: #1a1f25;
+}
+#autorisation{
+	width: 450px;
+	height: 350px;
+	background-color: #1a1f25;
+	margin: 170px auto 0 auto;
+	text-align: center;
+}
+h1{
+	width: 450px;
+	height: 20px;
+	font-family: Avantgarde,  sans-serif;
+	color: white; 
+	font-size: 45px;
+}
+input[type="login"],input[type="password"]{
+	width: 300px;
+	height: 35px;
+	margin-top: 5px;
+	margin-bottom: 13px;
+	background-color: #1a1f25;
+	font-size: 15px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #22272d;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+.autorisation-submit{
+	width: 310px;
+	height: 35px;
+	border-radius: 5px;
+	font-family: Avantgarde,  sans-serif;
+	font-size: 20px;
+	color: white;
+	background:#e6b333;
+	border: 0px;
+}
+
+.check{
+	font-family: Avantgarde,  sans-serif;
+	color: white;
+}
+#main_page{
+	display: none;
+}
+.buttons{
+	margin-top:2%; 
+	margin-left: 10%;
+}
+.main_new_project,.main_new_task,.main_new_user{
+	width: 12%;
+	min-width: 100px;
+	height: 9%;
+	
+	border-radius: 5px;
+	font-family: Avantgarde,  sans-serif;
+	font-size: 18px;
+	color: white;
+	background:#e6b333;
+	border: 0px;
+}
+.wrapper{
+	width: 95%;
+	max-width: 1000px;
+	margin-left: 10%;
+}
+.table{
+	margin-top: 3%;
+	width: 100%;
+	border-collapse: collapse;
+}
+.table_wrap{
+	overflow: auto;
+}
+.table th,td{
+	color: white;
+	padding: 5px;
+	border:1px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #22272d;
+}
