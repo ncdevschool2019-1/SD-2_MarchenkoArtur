@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 	<title></title>
 </head>
 <body>
@@ -20,10 +21,69 @@
 		</div>
 
 		<div id="main_page">
+			<div class="head_of_the_table">
+				<!--<input class="main_new_project" type="button" value="New Project">
+				<input class="main_new_task" type="button" value="New task">
+				<input class="main_new_user" type="button" value="New user">-->
 
-			<input class="main_new_project" type="button" id="new_project">
-			<input class="main_new_task" type="button" value="New task">
-			<input class="main_new_user" type="button" value="New user">
+				<label class="btn" for="modal-1">New Project</label>
+				<label class="btn" for="modal-2">New Task</label>
+				<label class="btn" for="modal-3">New User</label>
+				<div class="modal">
+					<input class="modal-open" id="modal-1" type="checkbox" hidden>
+					<div class="modal-wrap" aria-hidden="true" role="dialog">
+						<label class="modal-overlay" for="modal-1"></label>
+						<div class="modal-dialog">
+							<div class="modal-header">
+								<h2>Заголовок </h2>
+								<label class="btn-close" for="modal-1" aria-hidden="true">×</label>
+							</div>
+							<div class="modal-body">
+								<p>Здесь размещаете любое содержание...(с заголовоком и футером)</p>
+							</div>
+							<div class="modal-footer">
+								<label class="btn btn-primary" for="modal-1">закрыть</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal">
+						<input class="modal-open" id="modal-2" type="checkbox" hidden>
+						<div class="modal-wrap" aria-hidden="true" role="dialog">
+							<label class="modal-overlay" for="modal-2"></label>
+							<div class="modal-dialog">
+								<div class="modal-header">
+									<h2>Заголовок </h2>
+									<label class="btn-close" for="modal-2" aria-hidden="true">×</label>
+								</div>
+								<div class="modal-body">
+									<p>Здесь размещаете любое содержание...</p>
+								</div>
+								<div class="modal-footer">
+									<label class="btn btn-primary" for="modal-2">закрыть</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal">
+						<input class="modal-open" id="modal-3" type="checkbox" hidden>
+						<div class="modal-wrap" aria-hidden="true" role="dialog">
+							<label class="modal-overlay" for="modal-3"></label>
+							<div class="modal-dialog">
+								<div class="modal-header">
+									<h2>Заголовок </h2>
+									<label class="btn-close" for="modal-3" aria-hidden="true">×</label>
+								</div>
+								<div class="modal-body">
+									<p>Здесь размещаете </p>
+								</div>
+								<div class="modal-footer">
+									<label class="btn btn-primary" for="modal-3">закрыть</label>
+								</div>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
 			<div class="wrapper">
 				<div class="table_wrap">
 					<table class="table">
