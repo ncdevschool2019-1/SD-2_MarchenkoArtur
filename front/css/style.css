@@ -72,15 +72,22 @@ input[type="filter"]{
 }
 .form_select{
 	width: 440px;
-	height: 35px;
-	font-size: 15px;
 	border-radius: 5px;
-	border:2px solid #75777a;
+	border:2px solid #e6b333;
 }
 .forma_select{
 	width: 100%;
+	height: 35px;
 	position: relative;
-	background-color: #1a1f25;
+	background-color: #e6b333;
+}
+.forma_select select{
+	width: 100%;
+	height:100%;
+	font-size: 14px;
+	color: white;
+	border:none;
+	background-color: #e6b333;
 }
 
 .autorisation-submit{
