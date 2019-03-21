@@ -12,10 +12,10 @@ h1{
 	width: 450px;
 	height: 20px;
 	font-family: Avantgarde,  sans-serif;
-	color: white; 
+	color: #cfd1d3; 
 	font-size: 45px;
 }
-input[type="login"],input[type="password"]{
+.login_sign_in{
 	width: 300px;
 	height: 35px;
 	margin-top: 5px;
@@ -24,7 +24,21 @@ input[type="login"],input[type="password"]{
 	font-size: 15px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: #22272d;
+	border-color: #75777a;
+	border-radius: 5px;
+	padding-left: 10px;
+	color: white;
+}
+.password_sign_in{
+	width: 300px;
+	height: 35px;
+	margin-top: 5px;
+	margin-bottom: 13px;
+	background-color: #1a1f25;
+	font-size: 15px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #75777a;
 	border-radius: 5px;
 	padding-left: 10px;
 	color: white;
@@ -56,6 +70,18 @@ input[type="filter"]{
 	padding-left: 10px;
 	color: white;
 }
+.form_select{
+	width: 440px;
+	height: 35px;
+	font-size: 15px;
+	border-radius: 5px;
+	border:2px solid #75777a;
+}
+.forma_select{
+	width: 100%;
+	position: relative;
+	background-color: #1a1f25;
+}
 
 .autorisation-submit{
 	width: 310px;
@@ -63,6 +89,17 @@ input[type="filter"]{
 	border-radius: 5px;
 	font-family: Avantgarde,  sans-serif;
 	font-size: 20px;
+	color: white;
+	background:#e6b333;
+	border: 0px;
+	cursor: pointer;
+}
+.delete-task{
+	width: 60px;
+	height: 35px;
+	border-radius: 5px;
+	font-family: Avantgarde,  sans-serif;
+	font-size: 15px;
 	color: white;
 	background:#e6b333;
 	border: 0px;
@@ -80,7 +117,7 @@ input[type="filter"]{
 	margin-top:5%; 
 	margin-left: 10%;
 }
-
+/* ТАБЛИЦА */
 .wrapper{
 	width: 95%;
 	max-width: 1000px;
@@ -90,17 +127,54 @@ input[type="filter"]{
 	margin-top: 5%;
 	width: 100%;
 	border-collapse: collapse;
+	font-family: Avantgarde,  sans-serif;
+	color: #cfd1d3;
 }
 .table_wrap{
 	overflow: auto;
 }
-.table th,td{
-	color: white;
-	padding: 5px;
-	border:1px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #22272d;
+.table th{
+	padding: 10px 9px;
+	border-bottom:2px solid #75777a;
+	
+}
+.table td{
+	padding: 8px 7px;
+  	transition: .3s linear;
+  	border-bottom:1px solid #75777a;
+}
+/* ПАГИНАЦИЯ */
+li {
+  list-style-type: none;
+}
+a:link, a:hover, a:visited {
+	text-decoration: none;
+	color: #cfd1d3;
+	font-family: Avantgarde,  sans-serif;
+}
+.pagination {
+	margin-left: 53%;
+	display: flex;
+}
+.pagination-item {
+	margin-right: 18px;
+	border-radius: 10px;
+  	border: none;
+}
+.pagination a {
+	padding: 9px 14px 9px 14px;
+	transition: .2s all;
+                display: flex;
+}
+a:hover {
+	background-color: #e6b333;
+	border-radius: 10px;
+}
+
+.pg-active {
+	background-color: #e6b333;
+	border-radius: 10px;
+
 }
 
 
