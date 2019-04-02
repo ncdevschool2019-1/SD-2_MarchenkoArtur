@@ -7,13 +7,22 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
-import { BillingAccountsComponent } from './billing-accounts/billing-accounts.component';
 import {Ng4LoadingSpinnerModule} from "ng4-loading-spinner";
+import { AutorisationComponent } from './modules/autorisation/components/autorisation/autorisation.component';
+import { BillingTasksComponent } from './modules/billing-tasks/components/billing-tasks/billing-tasks.component';
+import { AddProjectComponent } from './modules/table-components/components/add-project/add-project.component';
+import { AddTaskComponent } from './modules/table-components/components/add-task/add-task.component';
+import { AddUserComponent } from './modules/table-components/components/add-user/add-user.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    BillingAccountsComponent
+    AutorisationComponent,
+    BillingTasksComponent,
+    AddProjectComponent,
+    AddTaskComponent,
+    AddUserComponent,
   ],
   imports: [
     BrowserModule,

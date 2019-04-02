@@ -1,0 +1,104 @@
+#autorisation{
+  width: 450px;
+  height: 350px;
+  background-color: #1a1f25;
+  margin: 170px auto 0 auto;
+  text-align: center;
+}
+h1{
+  width: 450px;
+  height: 20px;
+  font-family: Avantgarde,  sans-serif;
+  color: #cfd1d3;
+  font-size: 45px;
+}
+.login_sign_in{
+  width: 300px;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 13px;
+  background-color: #1a1f25;
+  font-size: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #75777a;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: white;
+}
+.password_sign_in{
+  width: 300px;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 13px;
+  background-color: #1a1f25;
+  font-size: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #75777a;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: white;
+}
+input[type="filter"]{
+  width: 300px;
+  height: 35px;
+  margin-left: 27%;
+  background-color: #1a1f25;
+  font-size: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #75777a;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: white;
+}
+.field_input{
+  width: 430px;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 13px;
+  background-color: #1a1f25;
+  font-size: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #75777a;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: white;
+}
+.form_select{
+  width: 440px;
+  border-radius: 5px;
+  border:2px solid #e6b333;
+}
+.forma_select{
+  width: 100%;
+  height: 35px;
+  position: relative;
+  background-color: #e6b333;
+}
+.forma_select select{
+  width: 100%;
+  height:100%;
+  font-size: 14px;
+  color: white;
+  border:none;
+  background-color: #e6b333;
+}
+
+.autorisation-submit{
+  width: 310px;
+  height: 35px;
+  border-radius: 5px;
+  font-family: Avantgarde,  sans-serif;
+  font-size: 20px;
+  color: white;
+  background:#e6b333;
+  border: 0px;
+  cursor: pointer;
+}
+.check{
+  font-family: Avantgarde,  sans-serif;
+  color: white;
+}
