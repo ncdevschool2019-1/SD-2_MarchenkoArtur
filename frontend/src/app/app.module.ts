@@ -13,6 +13,7 @@ import { BillingTasksComponent } from './modules/billing-tasks/components/billin
 import { AddProjectComponent } from './modules/table-components/components/add-project/add-project.component';
 import { AddTaskComponent } from './modules/table-components/components/add-task/add-task.component';
 import { AddUserComponent } from './modules/table-components/components/add-user/add-user.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { AddUserComponent } from './modules/table-components/components/add-user
     Ng4LoadingSpinnerModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
