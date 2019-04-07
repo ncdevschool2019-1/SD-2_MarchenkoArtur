@@ -1,6 +1,6 @@
 <div id="main_page">
   <div class="head_of_the_table">
-    <label class="btn" for="modal-1">New Project</label>
+    <label class="btn" (click)="add-project()">New Project</label>
     <label class="btn" for="modal-2">New User</label>
     <label class="btn" for="modal-3">New Task</label>
     <input type="filter" name="filter" placeholder="Filter">
@@ -25,16 +25,17 @@
           </thead>
           <tbody>
           <tr>
-            <td>1</td>
-            <td>Registration</td>
-            <td>Max</td>
-            <td>Open</td>
-            <td>17.03.2018</td>
-            <td>17.03.2018</td>
-            <td>20.03.2018</td>
-            <td>3 days</td>
-            <td>Marchenko</td>
-            <td>Lorem ipsum dolor sit amet</td>
+          <tr *ngFor="let task of tasks" >
+            <td>{{task.ticket_code}}</td>
+            <td>{{task.id}}</td>
+            <td>{{task.priority}}</td>
+            <td>{{task.status}}</td>
+            <td>{{task.created_data}}</td>
+            <td>{{task.created_data}}</td>
+            <td>{{task.due_data}}</td>
+            <td>{{task.estimation}}</td>
+            <td>{{task.user}}</td>
+            <td>{{task.description}}</td>
             <td><input class="delete-task" type="submit" value="Delete"></td>
           </tr>
           </tbody>
