@@ -17,8 +17,8 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
-    @RequestMapping(value = "/{type}", method = RequestMethod.GET)
-    public List<Task> getTask(@PathVariable String type) {
+    @RequestMapping(method = RequestMethod.GET)
+    public List<Task> getTask() {
         List<Task> list = new ArrayList<>();
         list.add(new Task());
         return list;
