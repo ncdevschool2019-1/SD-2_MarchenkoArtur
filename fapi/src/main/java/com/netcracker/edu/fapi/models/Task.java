@@ -24,6 +24,7 @@ public class Task {
         estimation=1;
         user="Marchenko";
         status="Opened";
+
     }
 
     public int getId() {

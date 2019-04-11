@@ -1,6 +1,6 @@
 <div id="main_page">
   <div class="head_of_the_table">
-    <label class="btn" (click)="add-project()">New Project</label>
+    <label class="btn" for="modal-1">New Project</label>
     <label class="btn" for="modal-2">New User</label>
     <label class="btn" for="modal-3">New Task</label>
     <input type="filter" name="filter" placeholder="Filter">
@@ -36,7 +36,7 @@
             <td>{{task.estimation}}</td>
             <td>{{task.user}}</td>
             <td>{{task.description}}</td>
-            <td><input class="delete-task" type="submit" value="Delete"></td>
+            <td><input class="delete-task" type="submit" value="Delete" (click)="deleteTask(task.id)"></td>
           </tr>
           </tbody>
         </table>
@@ -63,4 +63,80 @@
       </li>
     </ul>
   </div>
+
+<div class="modal">
+  <input class="modal-open" id="modal-1" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-1"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>New Project </h2>
+      </div>
+      <div class="modal-body">
+        <input type="text"  placeholder="Code" class="field_input">
+        <input type="text"  placeholder="Summary" class="field_input">
+      </div>
+      <div class="modal-footer">
+        <label class="btn btn-primary" for="modal-1">Add</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal">
+  <input class="modal-open" id="modal-2" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-2"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>New User</h2>
+      </div>
+      <div class="modal-body">
+        <input type="login"  placeholder="Login" class="field_input" >
+        <input type="password"  placeholder="Password" class="field_input">
+        <input type="password"  placeholder="Confirm Password" class="field_input">
+        <form class="form_select">
+          <div class="forma_select">
+            <select name="select">
+              <option value="0">Select</option>
+              <option value="1">Project manager</option>
+              <option value="2">Developer</option>
+              <option value="3">Tester</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <label class="btn btn-primary" for="modal-2">Add</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal">
+  <input class="modal-open" id="modal-3" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-3"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>New Task</h2>
+      </div>
+      <div class="modal-body">
+        <input type="text"  placeholder="Project Code" class="field_input" name="code" [(ngModel)]="_newTask.ticket_code" #code="ngModel">
+        <input type="text"  placeholder="Description" class="field_input" name="descr" [(ngModel)]="_newTask.description" #descr="ngModel">
+        <input type="text"  placeholder="Priority" class="field_input" name="prior" [(ngModel)]="_newTask.priority" #prior="ngModel">
+        <input type="text"  placeholder="Due Data" class="field_input" name="due_data" [(ngModel)]="_newTask.due_data" #due_data="ngModel">
+        <input type="text"  placeholder="Estimation" class="field_input" name="estimation" [(ngModel)]="_newTask.estimation" #estimation="ngModel">
+        <input type="text"  placeholder="Assignee" class="field_input" name="assign" [(ngModel)]="_newTask.user" #assign="ngModel">
+      </div>
+      <div class="modal-footer">
+        <label class="btn btn-primary" for="modal-3" (click)="addBillingTask(code,descr,prior,due_data,estimation,assign)">Add</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 

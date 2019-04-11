@@ -28,4 +28,16 @@ public class TaskServiceImpl implements TaskService {
         Task[] taskResponse = restTemplate.getForObject(backendServerUrl + "api/task/", Task[].class);
         return taskResponse == null ? Collections.emptyList() : Arrays.asList(taskResponse);
     }
+
+    @Override
+    public Task saveTasks(Task task) {
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.postForEntity(backendServerUrl + "/api/task", task, Task.class).getBody();
+    }
+
+    @Override
+    public void deleteTask(Long id) {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.delete(backendServerUrl + "/api/task" + id);
+    }
 }

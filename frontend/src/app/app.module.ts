@@ -14,6 +14,8 @@ import { AddProjectComponent } from './modules/table-components/components/add-p
 import { AddTaskComponent } from './modules/table-components/components/add-task/add-task.component';
 import { AddUserComponent } from './modules/table-components/components/add-user/add-user.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialog, MatDialogModule} from "@angular/material";
 
 
 @NgModule({
@@ -33,9 +35,12 @@ import { AppRoutingModule } from './/app-routing.module';
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[AddTaskComponent]
 })
 export class AppModule { }

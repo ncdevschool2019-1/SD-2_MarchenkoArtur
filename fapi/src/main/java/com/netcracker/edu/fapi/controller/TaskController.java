@@ -21,7 +21,21 @@ public class TaskController {
     public List<Task> getTask() {
         List<Task> list = new ArrayList<>();
         list.add(new Task());
+        list.add(new Task());
         return list;
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<Task> saveTasks(@RequestBody Task billingTask) {
+        if (billingTask != null) {
+            return ResponseEntity.ok(taskService.saveTasks(billingTask));
+        }
+        return null;
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public void deleteTask(@PathVariable String id) {
+        taskService.deleteTask(Long.valueOf(id));
     }
 
 }

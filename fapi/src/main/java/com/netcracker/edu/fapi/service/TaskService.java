@@ -4,4 +4,6 @@ import java.util.List;
 
 public interface TaskService {
     List<Task> getTask();
+    Task saveTasks(Task task);
+    void deleteTask(Long id);
 }

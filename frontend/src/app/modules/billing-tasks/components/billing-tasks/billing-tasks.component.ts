@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Task} from "../../model/task";
 import {TasksService} from "../../../../services/tasks.service";
 import {Subscription} from "rxjs/internal/Subscription";
+import {BsModalRef, BsModalService} from "ngx-bootstrap";
 
 @Component({
   selector: 'app-billing-tasks',
@@ -11,7 +12,14 @@ import {Subscription} from "rxjs/internal/Subscription";
 export class BillingTasksComponent implements OnInit {
   tasks:Task[];
 
-  constructor(private taskservice: TasksService) { }
+  public _newTask: Task=new Task();
+
+  private subscriptions: Subscription[]=[];
+
+
+  constructor(private taskservice: TasksService) {
+
+  }
 
   ngOnInit() {
     this.getTasks();
@@ -19,5 +27,16 @@ export class BillingTasksComponent implements OnInit {
 
   getTasks(){
   this.taskservice.getTasks().subscribe(tasks=>this.tasks=tasks);
+  }
+
+  addBillingTask():void{
+  this.subscriptions.push(this.taskservice.saveTasks(this._newTask).subscribe(()=>{
+
+  }))
+  }
+
+  public deleteTask(taskID: string): void {
+    this.subscriptions.push(this.taskservice.deleteTask(taskID).subscribe(() => {
+    }));
   }
 }

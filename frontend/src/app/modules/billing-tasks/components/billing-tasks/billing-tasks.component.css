@@ -17,6 +17,20 @@
   border:none;
   background-color: #e6b333;
 }
+.field_input{
+  width: 430px;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 13px;
+  background-color: #1a1f25;
+  font-size: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #75777a;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: white;
+}
 
 .autorisation-submit{
   width: 310px;
@@ -109,8 +123,6 @@ a:hover {
   border-radius: 10px;
 
 }
-
-
 
 .modal-header h2 {
   color: white;
