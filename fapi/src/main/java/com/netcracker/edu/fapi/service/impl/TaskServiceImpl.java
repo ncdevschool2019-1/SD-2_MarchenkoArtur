@@ -25,7 +25,7 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public List<Task> getTask() {
         RestTemplate restTemplate = new RestTemplate();
-        Task[] taskResponse = restTemplate.getForObject(backendServerUrl + "api/task/", Task[].class);
+        Task[] taskResponse = restTemplate.getForObject(backendServerUrl + "api/tasks/", Task[].class);
         return taskResponse == null ? Collections.emptyList() : Arrays.asList(taskResponse);
     }
 

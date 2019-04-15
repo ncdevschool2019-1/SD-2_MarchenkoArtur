@@ -7,24 +7,26 @@ public class Task {
     private int id;
     private  String ticket_code;
     private  String description;
-    private  String priority;
-    private  String created_data;
+    private  String priority_id;
+    private  String created_date;
     private  String due_data;
-    private int estimation;
-    private  String user;
-    private  String status;
+    private  String estimation;
+    private  String user_id;
+    private  String status_id;
 
     public Task(){
-        id=5;
-        ticket_code="XXX-001";
-        description="qwer";
-        priority="Medium";
-        created_data="06.04.2019";
-        due_data="08.04.2019";
-        estimation=1;
-        user="Marchenko";
-        status="Opened";
 
+    }
+    public Task(int id, String ticket_code, String description, String priority_id, String created_date, String due_data, String estimation, String user_id, String status_id) {
+        this.id = id;
+        this.ticket_code = ticket_code;
+        this.description = description;
+        this.priority_id = priority_id;
+        this.created_date = created_date;
+        this.due_data = due_data;
+        this.estimation = estimation;
+        this.user_id = user_id;
+        this.status_id = status_id;
     }
 
     public int getId() {
@@ -51,20 +53,20 @@ public class Task {
         this.description = description;
     }
 
-    public String getPriority() {
-        return priority;
+    public String getpriority_id() {
+        return priority_id;
     }
 
-    public void setPriority(String priority) {
-        this.priority = priority;
+    public void setpriority_id(String priority_id) {
+        this.priority_id = priority_id;
     }
 
-    public String getCreated_data() {
-        return created_data;
+    public String getcreated_date() {
+        return created_date;
     }
 
-    public void setCreated_data(String created_data) {
-        this.created_data = created_data;
+    public void setcreated_date(String created_date) {
+        this.created_date = created_date;
     }
 
     public String getDue_data() {
@@ -75,27 +77,27 @@ public class Task {
         this.due_data = due_data;
     }
 
-    public int getEstimation() {
+    public String getEstimation() {
         return estimation;
     }
 
-    public void setEstimation(int estimation) {
+    public void setEstimation(String estimation) {
         this.estimation = estimation;
     }
 
-    public String getUser() {
-        return user;
+    public String getuser_id() {
+        return user_id;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setuser_id(String user_id) {
+        this.user_id = user_id;
     }
 
-    public String getStatus() {
-        return status;
+    public String getstatus_id() {
+        return status_id;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setstatus_id(String status_id) {
+        this.status_id = status_id;
     }
 }

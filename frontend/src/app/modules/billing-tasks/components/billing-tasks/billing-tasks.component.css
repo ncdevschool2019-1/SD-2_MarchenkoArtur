@@ -124,6 +124,7 @@ a:hover {
 
 }
 
+
 .modal-header h2 {
   color: white;
   font-size: 20px;
@@ -258,7 +259,7 @@ a:hover {
   background: #66A1D3;
 }
 input[type="filter"]{
-  width: 300px;
+  width: 25%;
   height: 35px;
   margin-left: 27%;
   background-color: #1a1f25;

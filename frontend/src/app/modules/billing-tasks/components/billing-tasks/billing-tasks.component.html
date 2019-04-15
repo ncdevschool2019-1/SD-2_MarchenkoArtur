@@ -28,13 +28,13 @@
           <tr *ngFor="let task of tasks" >
             <td>{{task.ticket_code}}</td>
             <td>{{task.id}}</td>
-            <td>{{task.priority}}</td>
-            <td>{{task.status}}</td>
-            <td>{{task.created_data}}</td>
-            <td>{{task.created_data}}</td>
+            <td>{{task.priority_id}}</td>
+            <td>{{task.status_id}}</td>
+            <td>{{task.created_date}}</td>
+            <td>{{task.created_date}}</td>
             <td>{{task.due_data}}</td>
             <td>{{task.estimation}}</td>
-            <td>{{task.user}}</td>
+            <td>{{task.user_id}}</td>
             <td>{{task.description}}</td>
             <td><input class="delete-task" type="submit" value="Delete" (click)="deleteTask(task.id)"></td>
           </tr>
@@ -93,8 +93,8 @@
         <h2>New User</h2>
       </div>
       <div class="modal-body">
-        <input type="login"  placeholder="Login" class="field_input" >
-        <input type="password"  placeholder="Password" class="field_input">
+        <input type="login"  placeholder="Login" class="field_input" name="login" [(ngModel)]="_newUser.login" #login >
+        <input type="password"  placeholder="Password" class="field_input" name="password"  >
         <input type="password"  placeholder="Confirm Password" class="field_input">
         <form class="form_select">
           <div class="forma_select">

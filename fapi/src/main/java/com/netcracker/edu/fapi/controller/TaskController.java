@@ -11,18 +11,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/task")
+@RequestMapping("/api/tasks")
 public class TaskController {
 
     @Autowired
     private TaskService taskService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Task> getTask() {
-        List<Task> list = new ArrayList<>();
-        list.add(new Task());
-        list.add(new Task());
-        return list;
+    public ResponseEntity<List<Task>> getTask() {
+        return ResponseEntity.ok(taskService.getTask());
     }
 
     @RequestMapping(method = RequestMethod.POST)

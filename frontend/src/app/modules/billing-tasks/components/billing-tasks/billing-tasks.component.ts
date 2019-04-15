@@ -3,6 +3,7 @@ import {Task} from "../../model/task";
 import {TasksService} from "../../../../services/tasks.service";
 import {Subscription} from "rxjs/internal/Subscription";
 import {BsModalRef, BsModalService} from "ngx-bootstrap";
+import {User} from "../../../autorisation/model/user";
 
 @Component({
   selector: 'app-billing-tasks',
@@ -13,6 +14,7 @@ export class BillingTasksComponent implements OnInit {
   tasks:Task[];
 
   public _newTask: Task=new Task();
+  public _newUser: User=new User();
 
   private subscriptions: Subscription[]=[];
 
