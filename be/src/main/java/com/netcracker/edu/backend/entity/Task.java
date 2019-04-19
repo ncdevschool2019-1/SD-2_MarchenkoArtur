@@ -8,24 +8,28 @@ import java.util.Objects;
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String ticket_code;
     private String description;
-    private int priority_id;
+
     private String created_date;
     private String due_data;
     private int user_id;
     private String estimation;
     private int status_id;
 
+    @ManyToOne
+    @JoinColumn(name = "priority_id")
+    private Priority priority;
+
     public Task(){
 
     }
 
-    public Task(String ticket_code, String description, int priority_id, String created_date, String due_data, int user_id, String estimation, int status_id) {
+    public Task(String ticket_code, String description, String created_date, String due_data, int user_id, String estimation, int status_id) {
         this.ticket_code = ticket_code;
         this.description = description;
-        this.priority_id = priority_id;
+
         this.created_date = created_date;
         this.due_data = due_data;
         this.user_id = user_id;
@@ -33,7 +37,7 @@ public class Task {
         this.status_id=status_id;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
@@ -45,7 +49,7 @@ public class Task {
         this.status_id = status_id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -63,14 +67,6 @@ public class Task {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getPriority_id() {
-        return priority_id;
-    }
-
-    public void setPriority_id(int priority_id) {
-        this.priority_id = priority_id;
     }
 
     public String getCreated_date() {
@@ -105,6 +101,13 @@ public class Task {
         this.estimation = estimation;
     }
 
+    public Priority getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Priority priority) {
+        this.priority = priority;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -112,7 +115,6 @@ public class Task {
         if (o == null || getClass() != o.getClass()) return false;
         Task task = (Task) o;
         return id == task.id &&
-                priority_id == task.priority_id &&
                 user_id == task.user_id &&
                 Objects.equals(ticket_code, task.ticket_code) &&
                 Objects.equals(description, task.description) &&
@@ -123,7 +125,7 @@ public class Task {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, ticket_code, description, priority_id, created_date, due_data, user_id, estimation);
+        return Objects.hash(id, ticket_code, description, created_date, due_data, user_id, estimation);
     }
 
     @Override
@@ -131,8 +133,7 @@ public class Task {
         return "Task{" +
                 "id=" + id +
                 ", ticket_code='" + ticket_code + '\'' +
-                ", description='" + description + '\'' +
-                ", priority_id=" + priority_id +
+                ", description='" + description + '\''+
                 ", created_date='" + created_date + '\'' +
                 ", due_data='" + due_data + '\'' +
                 ", user_id=" + user_id +

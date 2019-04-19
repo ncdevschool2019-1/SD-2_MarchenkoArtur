@@ -33,12 +33,13 @@ export class BillingTasksComponent implements OnInit {
 
   addBillingTask():void{
   this.subscriptions.push(this.taskservice.saveTasks(this._newTask).subscribe(()=>{
-
+    this.getTasks();
   }))
   }
 
   public deleteTask(taskID: string): void {
     this.subscriptions.push(this.taskservice.deleteTask(taskID).subscribe(() => {
+      this.getTasks();
     }));
   }
 }

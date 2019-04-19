@@ -7,12 +7,12 @@ public class Task {
     private int id;
     private  String ticket_code;
     private  String description;
-    private  String priority_id;
     private  String created_date;
     private  String due_data;
     private  String estimation;
     private  String user_id;
     private  String status_id;
+    private Priority priority;
 
     public Task(){
 
@@ -21,7 +21,6 @@ public class Task {
         this.id = id;
         this.ticket_code = ticket_code;
         this.description = description;
-        this.priority_id = priority_id;
         this.created_date = created_date;
         this.due_data = due_data;
         this.estimation = estimation;
@@ -51,14 +50,6 @@ public class Task {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getpriority_id() {
-        return priority_id;
-    }
-
-    public void setpriority_id(String priority_id) {
-        this.priority_id = priority_id;
     }
 
     public String getcreated_date() {
@@ -99,5 +90,13 @@ public class Task {
 
     public void setstatus_id(String status_id) {
         this.status_id = status_id;
+    }
+
+    public Priority getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Priority priority) {
+        this.priority = priority;
     }
 }

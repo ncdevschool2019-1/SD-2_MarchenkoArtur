@@ -32,12 +32,12 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public Task saveTasks(Task task) {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.postForEntity(backendServerUrl + "/api/task", task, Task.class).getBody();
+        return restTemplate.postForEntity(backendServerUrl + "/api/tasks", task, Task.class).getBody();
     }
 
     @Override
     public void deleteTask(Long id) {
         RestTemplate restTemplate = new RestTemplate();
-        restTemplate.delete(backendServerUrl + "/api/task" + id);
+        restTemplate.delete(backendServerUrl + "/api/tasks/" + id);
     }
 }

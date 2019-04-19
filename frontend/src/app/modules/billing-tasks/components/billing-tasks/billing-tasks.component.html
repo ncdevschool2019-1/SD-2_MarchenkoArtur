@@ -28,7 +28,7 @@
           <tr *ngFor="let task of tasks" >
             <td>{{task.ticket_code}}</td>
             <td>{{task.id}}</td>
-            <td>{{task.priority_id}}</td>
+            <td>{{task.priority.priority}}</td>
             <td>{{task.status_id}}</td>
             <td>{{task.created_date}}</td>
             <td>{{task.created_date}}</td>
@@ -126,13 +126,13 @@
       <div class="modal-body">
         <input type="text"  placeholder="Project Code" class="field_input" name="code" [(ngModel)]="_newTask.ticket_code" #code="ngModel">
         <input type="text"  placeholder="Description" class="field_input" name="descr" [(ngModel)]="_newTask.description" #descr="ngModel">
-        <input type="text"  placeholder="Priority" class="field_input" name="prior" [(ngModel)]="_newTask.priority" #prior="ngModel">
+        <input type="text"  placeholder="Priority" class="field_input" name="prior" [(ngModel)]="_newTask.priority_id" #prior="ngModel">
         <input type="text"  placeholder="Due Data" class="field_input" name="due_data" [(ngModel)]="_newTask.due_data" #due_data="ngModel">
         <input type="text"  placeholder="Estimation" class="field_input" name="estimation" [(ngModel)]="_newTask.estimation" #estimation="ngModel">
-        <input type="text"  placeholder="Assignee" class="field_input" name="assign" [(ngModel)]="_newTask.user" #assign="ngModel">
+        <input type="text"  placeholder="Assignee" class="field_input" name="assign" [(ngModel)]="_newTask.user_id" #assign="ngModel">
       </div>
       <div class="modal-footer">
-        <label class="btn btn-primary" for="modal-3" (click)="addBillingTask(code,descr,prior,due_data,estimation,assign)">Add</label>
+        <label class="btn btn-primary" for="modal-3" (click)="addBillingTask()">Add</label>
       </div>
     </div>
   </div>

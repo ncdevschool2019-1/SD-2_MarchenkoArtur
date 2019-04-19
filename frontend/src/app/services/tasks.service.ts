@@ -16,11 +16,12 @@ export class TasksService {
   }
 
   saveTasks(task:Task):Observable<Task>{
-    return this.http.put<Task>('http://localhost:8081/api/task/',task);
+    return this.http.post<Task>('http://localhost:8081/api/tasks',task);
   }
 
   deleteTask(taskID: string): Observable<void> {
-    return this.http.delete<void>('http://localhost:8081/api/task/' + taskID);
+    return this.http.delete<void>('http://localhost:8081/api/tasks/' + taskID);
   }
 }
+
 
